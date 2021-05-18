@@ -12,6 +12,7 @@ if (localStorage.getItem(displayLocalStorageKey) === null) {
 
 darkButton.addEventListener("click", function(){
     toDark()
+    switchDisplay()
 })
 
 function toDark() {
@@ -44,7 +45,9 @@ function toDark() {
     document.querySelector("#inputBookAuthor").labels[0].classList.toggle("color-dark")
     document.querySelector("#inputBookYear").labels[0].classList.toggle("color-dark")
     document.querySelector("#inputBookIsComplete").labels[0].classList.toggle("color-dark")
+}
 
+function switchDisplay() {
     if (localStorage.getItem(displayLocalStorageKey) == 'light') {
         localStorage.setItem(displayLocalStorageKey, 'dark');
     }else{
